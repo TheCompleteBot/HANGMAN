@@ -2,6 +2,7 @@ import random
 import hangman_words
 import hangman_arts
 import sys
+from replit import clear
 #step1: generating words
 
 print(hangman_arts.logo)
@@ -23,6 +24,7 @@ while ("_" in display):
         break
 
     guess=input("enter a letter ")
+    clear()
     if(guess in display):
         print("you have already entered '{}' before please select another word".format(guess))
         continue
